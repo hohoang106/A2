@@ -1,3 +1,13 @@
+<?php
+include_once('function.php');
+include_once('function_product.php');
+include_once('function_index.php');
+$action = filter_input(INPUT_GET, 'action');
+$productID = filter_input(INPUT_GET, 'productID');
+
+$product_detail = get_product_by_id($productID);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -120,83 +130,14 @@
 							    	</p>
 							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
 							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image2.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image3.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image4.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image4.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image3.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image2.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image1.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
+							    <h2>Product Description</h2>
+							    <p>
+		
+							    <?php
+							    echo $product_detail['description'];
+							    ?>
+							    </p>
+
 							</ul>
 							<div class="cl">&nbsp;</div>
 						</div>
@@ -219,50 +160,11 @@
 							    	</p>
 							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
 							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image2.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image2.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image2.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
-							    <li>
-							    	<div class="image">
-							    		<a href="#"><img src="css/images/image1.jpg" alt=""></a>
-							    	</div>
-							    	<p>
-							    		Item Number: <span>125515</span><br>
-							    		Size List : <span>8/8.5/9.5/10/11</span><br>
-							    		Brand Name: <a href="#">Adidas Shoes</a>
-							    	</p>
-							    	<p class="price">Wholesale Price: <strong>53 USD</strong></p>
-							    </li>
+							    <p>
+							    <?php
+							    echo $product_detail['description'];
+							    ?>
+							    </p>
 							    <li>
 							    	<div class="image">
 							    		<a href="#"><img src="css/images/image1.jpg" alt=""></a>
