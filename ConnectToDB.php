@@ -23,7 +23,7 @@
                 if ($pdo === false) {
                   echo "ERROR: Could not connect Database";
                 }
-                $sql = 'SELECT * FROM public."Supplier"';
+                $sql = 'SELECT * FROM public."supplier"';
                 $stmt = $pdo->prepare($sql);
                 //Thiết lập kiểu dữ liệu trả về
                 $stmt->setFetchMode(PDO::FETCH_ASSOC);
