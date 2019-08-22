@@ -29,7 +29,7 @@
                 $stmt->setFetchMode(PDO::FETCH_ASSOC);
                 $stmt->execute();
                 $resultSet = $stmt->fetchAll();
-                echo '<p>Supplier Information:</p>';
+                echo '<p>Product Information:</p>';
               ?>
               <div class="table-responsive">
                 <table class="table">
